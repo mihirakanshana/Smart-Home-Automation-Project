@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-app: #0B0F14;
+    --bg-card: #151B23;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --text-primary: #FFFFFF;
+    --text-secondary: #8B95A5;
+  }
+
+  html.light,
+  [data-theme="light"] {
+    --bg-app: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --border-color: #E2E8F0;
+    --text-primary: #0F172A;
+    --text-secondary: #64748B;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* ==========================================================================
+   Light Mode Theme Styling Overrides
+   ========================================================================== */
+
+html.light body,
+html.light .bg-\[\#0B0F14\] {
+  background-color: #F8FAFC !important;
+  color: #0F172A !important;
+}
+
+html.light .bg-\[\#151B23\] {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+}
+
+html.light header.bg-\[\#0B0F14\]\/90 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-color: #E2E8F0 !important;
+}
+
+html.light aside.bg-\[\#0B0F14\] {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+}
+
+html.light .text-white {
+  color: #0F172A !important;
+}
+
+html.light .text-white\/80 {
+  color: #334155 !important;
+}
+
+html.light .text-white\/60 {
+  color: #64748B !important;
+}
+
+html.light .text-white\/20 {
+  color: #CBD5E1 !important;
+}
+
+html.light .text-\[\#8B95A5\] {
+  color: #64748B !important;
+}
+
+/* Borders in light mode */
+html.light .border-white\/5,
+html.light .border-white\/8,
+html.light .border-white\/10,
+html.light .border-white\/15,
+html.light .border-white\/20 {
+  border-color: #E2E8F0 !important;
+}
+
+html.light .divide-white\/5 > :not([hidden]) ~ :not([hidden]),
+html.light .divide-white\/8 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #F1F5F9 !important;
+}
+
+/* Subtle backgrounds in light mode */
+html.light .bg-white\/5 {
+  background-color: #F1F5F9 !important;
+  color: #334155;
+}
+
+html.light .bg-white\/8,
+html.light .bg-white\/10 {
+  background-color: #E2E8F0 !important;
+}
+
+html.light .bg-black\/30,
+html.light .bg-black\/40 {
+  background-color: #F8FAFC !important;
+  border-color: #CBD5E1 !important;
+  color: #0F172A !important;
+}
+
+html.light input,
+html.light select,
+html.light textarea {
+  color: #0F172A !important;
+  background-color: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+}
+
+html.light select option {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+}
+
+html.light input::placeholder {
+  color: #94A3B8 !important;
+}
+
+/* Hover effects in light mode */
+html.light .hover\:bg-white\/5:hover {
+  background-color: #F1F5F9 !important;
+}
+
+html.light .hover\:bg-white\/10:hover {
+  background-color: #E2E8F0 !important;
+}
+
+html.light .hover\:text-white:hover {
+  color: #0F172A !important;
+}
+
+html.light .hover\:border-white\/15:hover,
+html.light .hover\:border-white\/20:hover {
+  border-color: #CBD5E1 !important;
+}
+
+/* Modal and Tooltip backgrounds */
+html.light .bg-black\/70 {
+  background-color: rgba(15, 23, 42, 0.5) !important;
+}
+
+/* Chart Tooltips */
+html.light .recharts-default-tooltip,
+html.light .recharts-tooltip-wrapper .bg-\[\#151B23\] {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar navigation item active and hover */
+html.light .bg-indigo-600 {
+  background-color: #4F46E5 !important;
+  color: #FFFFFF !important;
+}
+
+html.light .bg-indigo-600 .text-white,
+html.light .bg-indigo-600 span,
+html.light button.bg-indigo-600,
+html.light button.bg-indigo-600 span {
+  color: #FFFFFF !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F2937;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}

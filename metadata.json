@@ -1,0 +1,10 @@
+{
+  "name": "Smart Home",
+  "description": "Intelligent Home Monitoring & Control - Real-time ESP32 IoT system connected to Firebase Realtime Database",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
